@@ -92,7 +92,7 @@
 }
 
 .footer-dropdown:before, .footer-dropdown:after{
-	top: 300px !important;
+	top: 0px !important;
 }
 
 .fixed-plugin .dropdown-menu > .active > a,

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
-import { Grid, Row, Col } from 'react-bootstrap';
+import {
+    Grid, Row, Col, Panel, Heading, Title, Body,
+    ButtonGroup, ButtonToolbar
+} from 'react-bootstrap';
 
-
-import {Card} from 'components/Card/Card.jsx';
-import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
-import {Tasks} from 'components/Tasks/Tasks.jsx';
+import { Card } from 'components/Card/Card.jsx';
+import { StatsCard } from 'components/StatsCard/StatsCard.jsx';
+import { Tasks } from 'components/Tasks/Tasks.jsx';
 import {
     dataPie,
     legendPie,
@@ -19,11 +21,17 @@ import {
     legendBar
 } from 'variables/Variables.jsx';
 
+import { FormInputs } from 'components/FormInputs/FormInputs.jsx';
+import { UserCard } from 'components/UserCard/UserCard.jsx';
+import Button from 'elements/CustomButton/CustomButton.jsx';
+
+import avatar from "assets/img/faces/foto.JPG";
+
 class Dashboard extends Component {
-    createLegend(json){
+    createLegend(json) {
         var legend = [];
-        for(var i = 0; i < json["names"].length; i++){
-            var type = "fa fa-circle text-"+json["types"][i];
+        for (var i = 0; i < json["names"].length; i++) {
+            var type = "fa fa-circle text-" + json["types"][i];
             legend.push(
                 <i className={type} key={i}></i>
             );
@@ -37,6 +45,40 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="content">
+                <UserCard
+                    bgImage="https://www.gocosmos.org/wp-content/uploads/2017/01/Cosmos3.jpg"
+                    avatar={avatar}
+                    name="Andre Luiz Costantino Botta"
+                    userName="alcbotta"
+                    description={
+                        <span>
+                            Software Engineer
+                                        {/* <br />
+                            Your chick she so thirsty
+                                        <br />
+                            I'm in that two seat Lambo" */}
+                        </span>
+                    }
+                    // socials={
+                    //     <div>
+                    //         <Button href="https://www.facebook.com/andreluiz.constantinobotta" target="_target" simple><i className="fa fa-facebook-square"></i></Button>
+
+                    //         <Button simple><i className="fa fa-google-plus-square"></i></Button>
+                    //     </div>
+                    // }
+                />
+                <Panel bsStyle="primary">
+                    {/* <Panel.Heading>
+                        <Panel.Title componentClass="h3">
+                            
+                            </Panel.Title>
+                    </Panel.Heading> */}
+                    <Panel.Body>
+                        Description
+                    </Panel.Body>
+                    {/* <Panel.Footer>Panel footer</Panel.Footer> */}
+                </Panel>
+
                 {/* <Grid fluid>
                     <Row>
                         <Col lg={3} sm={6}>

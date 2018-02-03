@@ -56,11 +56,11 @@ class MainAcademicProjects extends Component {
                                         <OpencvButton />
                                     </ButtonGroup>
 
-                                    <ButtonGroup>
+                                    {/* <ButtonGroup>
                                         <Button fill bsStyle="primary">
                                             A* Algorithm
                                     </Button>
-                                    </ButtonGroup>
+                                    </ButtonGroup> */}
                                     
                                 </ButtonToolbar>
                             </Row>
