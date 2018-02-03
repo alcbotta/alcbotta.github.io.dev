@@ -37,7 +37,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="content">
-                <Grid fluid>
+                {/* <Grid fluid>
                     <Row>
                         <Col lg={3} sm={6}>
                             <StatsCard
@@ -164,7 +164,7 @@ class Dashboard extends Component {
                         </Col>
                     </Row>
 
-                </Grid>
+                </Grid> */}
             </div>
         );
     }

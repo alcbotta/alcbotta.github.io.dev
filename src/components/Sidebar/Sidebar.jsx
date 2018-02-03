@@ -8,6 +8,8 @@ import logo from 'assets/img/reactlogo.png';
 
 import appRoutes from 'routes/app.jsx';
 
+
+
 class Sidebar extends Component{
     constructor(props){
         super(props);
@@ -33,14 +35,14 @@ class Sidebar extends Component{
             <div id="sidebar" className="sidebar" data-color="black" data-image={imagine}>
                 <div className="sidebar-background" style={sidebarBackground}></div>
                     <div className="logo">
-                        <a href="https://www.creative-tim.com" className="simple-text logo-mini">
+                        {/* <a href="https://www.creative-tim.com" className="simple-text logo-mini">
                             <div className="logo-img">
                                 <img src={logo} alt="logo_image"/>
                             </div>
 
-                        </a>
-                        <a href="https://www.creative-tim.com" className="simple-text logo-normal">
-                            Creative Tim
+                        </a> */}
+                        <a href="/" className="simple-text logo-normal">
+                            Andre Botta
                         </a>
                     </div>
                 <div className="sidebar-wrapper">
