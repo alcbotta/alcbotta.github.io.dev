@@ -53,24 +53,31 @@ class HeaderLinks extends Component{
             <div>
                 <Nav pullRight>
                     <NavItem eventKey={1} href="https://drive.google.com/file/d/1DvirRtde8BrvTYtXfiko5TtrsW3lTmua/view?usp=sharing" target="_blank">
-                        <li>
-                       CV 
-                     </li>
+                    <div style={{minHeight: 20}}>
+                    <li>
+                        <i className="fa fa-file-text">
+                        </i>
+                        </li>
+                     </div>
                     </NavItem>
                     <NavItem eventKey={2} href="https://github.com/alcbotta" target="_blank">
                         {/* <i className="fa fa-dashboard"></i>
                         <p className="hidden-lg hidden-md">Dashboard</p> */}
+                        <div style={{minHeight: 20}}>
                         <li>
                         <i className="fa fa-github"></i>
                         </li>
+                        </div>
                     </NavItem>
 
                     <NavItem eventKey={3}  href="https://www.linkedin.com/in/andrebotta/" target="_blank">
                         {/* <i className="fa fa-dashboard"></i>
                         <p className="hidden-lg hidden-md">Dashboard</p> */}
+                        <div style={{minHeight: 20}}>
                         <li>
                         <i className="fa fa-linkedin"></i>
                         </li>
+                        </div>
                     </NavItem>
                     {/* <NavItem eventKey={3} href="#">
                         <i className="fa fa-search"></i>

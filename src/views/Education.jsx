@@ -7,6 +7,8 @@ import {
 
 import utfprLogo from 'assets/img/utfpr.webp';
 import uobLogo from 'assets/img/uob.png';
+import { NavLink } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 class Education extends Component {
@@ -19,7 +21,7 @@ class Education extends Component {
                 <Panel bsStyle="primary">
                     <Panel.Heading>
                         <Panel.Title componentClass="h3">
-                            Graduation
+                            Undergraduate
                             </Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
@@ -29,9 +31,22 @@ class Education extends Component {
                             </Media.Left>
                             <Media.Body>
                                 <Media.Heading>Federal University of Technology – Parana</Media.Heading>
-                                <p>
-                                    Computer Engineering - Five years undergraduate course
-                                </p>
+                                <div>
+                                    <p>
+                                        Computer Engineering - Five years undergraduate course
+                                        <Link to="/mainacademicprojects#AutomaticTrajectory2">Your link text</Link>
+
+                                    {/* <NavLink
+                                            to={"/mainacademicprojects#AutomaticTrajectory4"}
+                                            className="nav-link"
+                                            activeClassName="active"
+                                        // style={{ color: '#000' }} 
+                                        >
+                                            For more information click here
+                                    </NavLink> */}
+                                    </p>
+
+                                </div>
                             </Media.Body>
                         </Media>
 

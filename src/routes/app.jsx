@@ -17,7 +17,7 @@ import AcademicResearch from 'views/AcademicResearch.jsx';
 
 
 const appRoutes = [
-    { path: "/statement", name: "About me", icon: "pe-7s-user", component: Dashboard },
+    { path: "/aboutme", name: "About me", icon: "pe-7s-user", component: Dashboard },
     //{ path: "/user", name: "User Profile", icon: "pe-7s-user", component: UserProfile },
     // { path: "/table", name: "Table List", icon: "pe-7s-note2", component: TableList },
     // { path: "/typography", name: "Typography", icon: "pe-7s-news-paper", component: Typography },

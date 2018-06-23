@@ -13,7 +13,7 @@
 
     .sidebar-wrapper{
         position: relative;
-        height: calc(100vh - 75px);
+        // height: calc(100vh - 75px);
         overflow: auto;
         width: 260px;
         z-index: 4;
@@ -243,8 +243,9 @@ body > .navbar-collapse{
 
     > .content{
         padding: 30px 15px;
-        // min-height: calc(100% - 123px); andre
-        min-height: 100%;
+        min-height: calc(100% - 65px); 
+        // height: 100%;
+        // min-height: 100%;
     }
 
     > .footer{
