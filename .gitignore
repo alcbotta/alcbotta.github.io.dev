@@ -1,4 +1,5 @@
 package-lock.json
 node_modules/
 build/
-./outcomex-farmdeck-portal
+./npm-debug*
+./Documentation

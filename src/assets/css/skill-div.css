@@ -1,0 +1,8 @@
+.skill-div-parent{
+    width: 400px;
+}
+.skill-div-child{
+    float: left;
+    width:200px;
+    height: 100px;
+}

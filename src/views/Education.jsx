@@ -34,7 +34,7 @@ class Education extends Component {
                                 <div>
                                     <p>
                                         Computer Engineering - Five years undergraduate course
-                                        <Link to="/mainacademicprojects#AutomaticTrajectory2">Your link text</Link>
+                                        {/* <Link to="/mainacademicprojects#AutomaticTrajectory2">Your link text</Link> */}
 
                                     {/* <NavLink
                                             to={"/mainacademicprojects#AutomaticTrajectory4"}

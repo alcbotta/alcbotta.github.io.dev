@@ -14,6 +14,9 @@ import {
     ArduinoButton, ArmButton
 } from 'elements/DefaultButtons.jsx';
 
+import "assets/css/skill-div.css"
+import {DevelopmentWarning} from "elements/DevelopmentWarning.jsx"
+
 class SkillsSummary extends Component {
 
 
@@ -21,6 +24,8 @@ class SkillsSummary extends Component {
         return (
 
             <div className="content">
+                                   <DevelopmentWarning />
+
                 <Panel bsStyle="primary">
                     <Panel.Heading>
                         <Panel.Title componentClass="h3">
@@ -30,29 +35,13 @@ class SkillsSummary extends Component {
                     <Panel.Body>
                         <Grid fluid>
                             <Row>
-                                {/* <Col>
-                                    <Button href="#" style={{color:"orange", borderWidth:"1px"}} bsStyle="default">
-                                       asdffsa
-                                    </Button>
-                                </Col> */}
-                                {/* <Col >
-                                    <ButtonToolbar>
-                                    <CppButton />
-                                    </ButtonToolbar>
-                                    </Col>
-
-                                    <Col>
-                                    <ButtonToolbar>
-                                    <PythonButton />
-                                    </ButtonToolbar>
-                                    </Col>
-                                </Row>
-                                <Row> */}
+                                
                                 <ButtonToolbar>
 
                                     <ButtonGroup>
                                         <ClangButton />
                                     </ButtonGroup>
+
 
                                     <ButtonGroup>
                                         <CppButton />

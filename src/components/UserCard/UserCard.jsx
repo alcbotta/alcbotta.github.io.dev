@@ -6,11 +6,12 @@ export class UserCard extends Component{
         return (
             <div className="card card-user">
                 <div className="image">
-                    <img src={this.props.bgImage} alt="..."/>
+                    {/* <img src={this.props.bgImage} alt="..."/> */}
+                    <div style={{background: "red"}}/>
                 </div>
                 <div className="content">
                     <div className="author">
-                         <a href="#pablo">
+                         <a >
                             <img className="avatar border-gray" src={this.props.avatar} alt="..."/>
                             <h4 className="title">
                                 {this.props.name}

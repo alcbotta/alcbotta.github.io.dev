@@ -25,6 +25,8 @@ import { FormInputs } from 'components/FormInputs/FormInputs.jsx';
 import { UserCard } from 'components/UserCard/UserCard.jsx';
 import Button from 'elements/CustomButton/CustomButton.jsx';
 
+import {DevelopmentWarning} from "elements/DevelopmentWarning.jsx"
+
 import avatar from "assets/img/faces/foto.JPG";
 
 class Dashboard extends Component {
@@ -45,20 +47,39 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="content">
-                <UserCard
-                    bgImage="https://www.gocosmos.org/wp-content/uploads/2017/01/Cosmos3.jpg"
-                    avatar={avatar}
-                    name="Andre Luiz Costantino Botta"
-                    userName="alcbotta"
-                    description={
-                        <span>
-                            Software Engineer
-                                        {/* <br />
-                            Your chick she so thirsty
-                                        <br />
-                            I'm in that two seat Lambo" */}
-                        </span>
-                    }
+             <DevelopmentWarning />
+                      
+                    <UserCard
+                        // bgImage="https://www.gocosmos.org/wp-content/uploads/2017/01/Cosmos3.jpg"
+                        avatar={avatar}
+                        name="Andre Luiz Costantino Botta"
+                        userName="alcbotta"
+                        description={
+                            <div>
+                           
+<div style={{textAlign: "left"}}>
+<br />
+<div style={{
+          margin: "auto", width: "70%", height: "7px",
+          backgroundImage: "linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%)",
+          borderRadius: "30px"
+        }} />
+
+
+        <br />
+<div>
+Software engineer with a background in Machine Learning, Computer Vision and Robotics, currently expanding my skills to full stack development.
+    
+    My most recent projects include:
+    <ul >
+    <li>Development of a Web Portal for the end user of an Internet of Things(IoT) Plarform focused on the automation of a farm;</li>
+{/* link to professional experience */}
+    <li>Development of a Web Portal for accouting and sales manangement.</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+                        }
                     // socials={
                     //     <div>
                     //         <Button href="https://www.facebook.com/andreluiz.constantinobotta" target="_target" simple><i className="fa fa-facebook-square"></i></Button>
@@ -66,148 +87,9 @@ class Dashboard extends Component {
                     //         <Button simple><i className="fa fa-google-plus-square"></i></Button>
                     //     </div>
                     // }
-                />
-                <Panel bsStyle="primary">
-                    {/* <Panel.Heading>
-                        <Panel.Title componentClass="h3">
-                            
-                            </Panel.Title>
-                    </Panel.Heading> */}
-                    <Panel.Body>
-                        Description
-                    </Panel.Body>
-                    {/* <Panel.Footer>Panel footer</Panel.Footer> */}
-                </Panel>
-
-                {/* <Grid fluid>
-                    <Row>
-                        <Col lg={3} sm={6}>
-                            <StatsCard
-                                bigIcon={<i className="pe-7s-server text-warning"></i>}
-                                statsText="Capacity"
-                                statsValue="105GB"
-                                statsIcon={<i className="fa fa-refresh"></i>}
-                                statsIconText="Updated now"
-                            />
-                        </Col>
-                        <Col lg={3} sm={6}>
-                            <StatsCard
-                                bigIcon={<i className="pe-7s-wallet text-success"></i>}
-                                statsText="Revenue"
-                                statsValue="$1,345"
-                                statsIcon={<i className="fa fa-calendar-o"></i>}
-                                statsIconText="Last day"
-                            />
-                        </Col>
-                        <Col lg={3} sm={6}>
-                            <StatsCard
-                                bigIcon={<i className="pe-7s-graph1 text-danger"></i>}
-                                statsText="Errors"
-                                statsValue="23"
-                                statsIcon={<i className="fa fa-clock-o"></i>}
-                                statsIconText="In the last hour"
-                            />
-                        </Col>
-                        <Col lg={3} sm={6}>
-                            <StatsCard
-                                bigIcon={<i className="fa fa-twitter text-info"></i>}
-                                statsText="Followers"
-                                statsValue="+45"
-                                statsIcon={<i className="fa fa-refresh"></i>}
-                                statsIconText="Updated now"
-                            />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={8}>
-                            <Card
-                                statsIcon="fa fa-history"
-                                id="chartHours"
-                                title="Users Behavior"
-                                category="24 Hours performance"
-                                stats="Updated 3 minutes ago"
-                                content={
-                                    <div className="ct-chart">
-                                        <ChartistGraph
-                                            data={dataSales}
-                                            type="Line"
-                                            options={optionsSales}
-                                            responsiveOptions={responsiveSales}
-                                        />
-                                    </div>
-                                    }
-                                legend={
-                                    <div className="legend">
-                                        {this.createLegend(legendSales)}
-                                    </div>
-                                }
-                            />
-                        </Col>
-                        <Col md={4}>
-                            <Card
-                                statsIcon="fa fa-clock-o"
-                                title="Email Statistics"
-                                category="Last Campaign Performance"
-                                stats="Campaign sent 2 days ago"
-                                content={
-                                    <div id="chartPreferences" className="ct-chart ct-perfect-fourth">
-                                        <ChartistGraph data={dataPie} type="Pie"/>
-                                    </div>
-                                }
-                                legend={
-                                    <div className="legend">
-                                        {this.createLegend(legendPie)}
-                                    </div>
-                                }
-                            />
-                        </Col>
-                    </Row>
-
-                    <Row>
-                        <Col md={6}>
-                            <Card
-                                id="chartActivity"
-                                title="2014 Sales"
-                                category="All products including Taxes"
-                                stats="Data information certified"
-                                statsIcon="fa fa-check"
-                                content={
-                                    <div className="ct-chart">
-                                        <ChartistGraph
-                                            data={dataBar}
-                                            type="Bar"
-                                            options={optionsBar}
-                                            responsiveOptions={responsiveBar}
-                                        />
-                                    </div>
-                                }
-                                legend={
-                                    <div className="legend">
-                                        {this.createLegend(legendBar)}
-                                    </div>
-                                }
-                            />
-                        </Col>
-
-                        <Col md={6}>
-                            <Card
-                                title="Tasks"
-                                category="Backend development"
-                                stats="Updated 3 minutes ago"
-                                statsIcon="fa fa-history"
-                                content={
-                                    <div className="table-full-width">
-                                        <table className="table">
-                                            <Tasks />
-                                        </table>
-                                    </div>
-                                }
-                            />
-                        </Col>
-                    </Row>
-
-                </Grid> */}
+                    />
             </div>
+            
         );
     }
 }

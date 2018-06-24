@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "dependencies": {
+    "react-pdf": "^3.0.5",
     "react-router-hash-link": "^1.2.0",
     "react-player": "^0.25.3",
     "react-fa": "^5.0.0",
